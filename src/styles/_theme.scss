@@ -1,0 +1,52 @@
+// body {
+$themes: (
+  "light": (
+    // All 3 changed
+    "color-background": "#f9f9fb",
+    "color-foreground": "#060606",
+    
+    "color-background-opacity": "#f9f9fb20",
+    "color-foreground-opacity": "#06060620",
+
+    "color-primary": "#d4163c",//"#0069FE",
+    "color-secondary": "#4685af",
+    "color-tertiary": "#C0B6B4",
+    "color-tertiary-light": "#e6eaf2",
+    "accent-0": "#0A2143",
+    "accent-2": "#61D3DE",
+
+    "color-success": "#84cc16",
+    "color-warning": "#EAB308",
+    "color-error": "#D41976",
+    "color-surface": "#495a8f"
+    // This changed as well
+  ),
+  "dark": (
+    "color-background": "#0F1014",
+    "color-foreground": "#F7FBFE",
+    
+    "color-background-opacity": "#0F101420",
+    "color-foreground-opacity": "#F7FBFE20",
+
+    "color-primary": "#d4163c",
+    "color-secondary": "#4685af",
+    "color-tertiary": "#C0B6B4",
+    "color-tertiary-light": "#1f2029",
+    "accent-0": "#0A2143",
+    "accent-2": "#61D3DE",
+
+    "color-success": "#84cc16",
+    "color-warning": "#EAB308",
+    "color-error": "#D41976",
+    "color-surface": "#495a8f"
+  ),
+);
+
+@each $theme-name, $properties in $themes {
+  html.#{$theme-name} {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}

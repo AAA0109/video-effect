@@ -1,0 +1,38 @@
+.wrapper {
+  background: var(--color-tertiary-light);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 140px;
+
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    padding-top: 1px;
+
+    background: var(--color-background);
+    border-radius: 50%;
+    color: rgb(255, 140, 140);
+    width: 30px;
+    height: 30px;
+  }
+
+  .title {
+    color: var(--color-foreground);
+    margin-top: 10px;
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+  .details {
+    color: var(--color-tertiary);
+    font-size: 12px;
+    width: 100%;
+    height: max-content;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
